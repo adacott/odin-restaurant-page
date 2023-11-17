@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// Universally applied styles:
+
+$primary-color: rgba(26, 26, 26, 0.648);
+$secondary-color: red;
+$tertiary-color: rgba(202, 172, 1, 0.503);
+$accents-color: white;
+
+:root {
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-color: $primary-color;
+    box-sizing: border-box;
+}
+
+// Styles that are applied to individual webpages as identified by ID
+
+#content {
+    #home {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url(../images/home_image.jpeg);
+        background-color: #cccccc;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        header {
+            background-color: $tertiary-color;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 1px solid gold;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    margin-right: 15px;
+                }
+
+                &>* {}
+            }
+
+            nav {
+                ul {
+                    display: flex;
+
+                    li {
+                        list-style-type: none;
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            margin-right: 15px;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-flow: row wrap;
+
+            .container {
+                width: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .about {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: $accents-color;
+                    width: 60%;
+                    background-color: $primary-color;
+                    border-radius: 5px;
+
+                    h1 {}
+
+                    div {
+                        width: clamp(20ch, 70%, 75ch);
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+
+        }
+
+
+        footer {
+            background-color: $tertiary-color;
+            border-top: 1px solid gold;
+            text-align: center;
+            padding: 15px 0px;
+        }
+    }
+
+    #menu {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url(../images/menu_image.jpeg);
+        background-color: #cccccc;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        header {
+            background-color: $tertiary-color;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 1px solid gold;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    margin-right: 15px;
+                }
+            }
+
+            nav {
+                ul {
+                    display: flex;
+
+                    li {
+                        list-style-type: none;
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            margin-right: 15px;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-flow: row wrap;
+
+            .container {
+                width: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        footer {
+            background-color: $tertiary-color;
+            border-top: 1px solid gold;
+            text-align: center;
+            padding: 15px 0px;
+        }
+    }
+
+    #contact {
+
+        header {
+            background-color: $tertiary-color;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 1px solid gold;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    margin-right: 15px;
+                }
+            }
+
+            nav {
+                ul {
+                    display: flex;
+
+                    li {
+                        list-style-type: none;
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            margin-right: 15px;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-flow: row wrap;
+
+            .container {
+                width: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        footer {
+            background-color: $tertiary-color;
+            border-top: 1px solid gold;
+            text-align: center;
+            padding: 15px 0px;
+        }
+    }
+}
