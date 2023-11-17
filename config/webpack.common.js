@@ -39,10 +39,10 @@ module.exports = {
             title: "Webpack Template",
             inject: 'body',
             template: "./src/html/index.html",
-            fileName: "[name].html"
+            // fileName: "[name].html" -- don't need this when using template
         }),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            filename: "style.css", // can also do [name].css if serving up multiple files to generate the appropriate name
             chunkFilename: "[id].css"
         })
     ],
