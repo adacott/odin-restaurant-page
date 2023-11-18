@@ -73,8 +73,7 @@ function createFooter(footer) {
     footer.appendChild(div);
 }
 
-
-function createHome() {
+function createInitialPage() {
     if (document.getElementById("home")) {
         return;
     } else {
@@ -87,4 +86,15 @@ function createHome() {
     }
 }
 
-export { createHome };
+function createHome() {
+    const content = document.getElementById("content");
+    const section = content.lastChild;
+    if (document.getElementById("home")) {
+        return;
+    }
+    section.id = "home";
+    const main = document.querySelector("main");
+    createMain(main);
+}
+
+export { createHome, createInitialPage };

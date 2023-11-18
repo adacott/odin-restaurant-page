@@ -23,7 +23,9 @@ body {
     box-sizing: border-box;
 }
 
-
+a {
+    user-select: none;
+}
 
 // Styles that are applied to individual webpages as identified by ID
 #content {

@@ -1,6 +1,6 @@
 import "./../scss/style.scss";
 import "./contact.js";
-import { createHome } from "./home.js";
+import { createHome, createInitialPage } from "./home.js";
 import { createMenu } from "./menu.js";
 
 
@@ -12,12 +12,10 @@ console.log("Connected and watching");
 
 // =======================================================================
 window.onload = function () {
-    createHome();
+    createInitialPage();
 
     const homeBtn = document.querySelector("header nav ul li:nth-child(1)");
     homeBtn.addEventListener("click", createHome);
-
-    // Create an eventlistener for the menu button to execute the function
     const menuBtn = document.querySelector("header nav ul li:nth-child(2)");
     menuBtn.addEventListener("click", createMenu);
 }
