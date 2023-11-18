@@ -82,6 +82,13 @@ function createMain(main) {
     main.appendChild(div);
 }
 
+function createFooter(footer) {
+    const div = document.createElement("div");
+    div.classList.add("copy-notice");
+    div.textContent = "Coptright (C) adacott 2023";
+    footer.appendChild(div);
+}
+
 // Usage:
 const { header, main, footer } = createMainStructure();
 createHeader(header, img);
