@@ -17,8 +17,11 @@ window.onload = function () {
     createHome();
 }
 
+// Create an eventlistener for the home button to execute the function if not on initial page load
+const homeBtn = document.querySelector("#home header nav ul li:nth-child(1)");
+homeBtn.addEventListener("click", function () {
+    createHome();
+});
 
-
-// createHome();
 // createMenu();
 // createContact();
