@@ -11,6 +11,8 @@ $accents-color: white;
     font-size: 16px;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -23,6 +25,8 @@ body {
 
 // Styles that are applied to individual webpages as identified by ID
 #content {
+    // height: 100%;
+
     #home {
         height: 100vh;
         display: flex;
@@ -115,13 +119,13 @@ body {
     }
 
     #menu {
-        height: 100vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         background-image: url(../images/home_image.jpeg);
         background-color: #cccccc;
-        background-position: 50%;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
@@ -164,14 +168,34 @@ body {
         main {
             flex: 1;
             display: flex;
-            flex-flow: row wrap;
+            justify-content: center;
+            align-items: start;
+            margin-top: 10%;
 
             .container {
-                width: 100%;
+                width: 85%;
                 text-align: center;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: start;
+                flex-wrap: wrap;
+                border: 1px solid gold;
+                background-color: $primary-color;
+                margin-bottom: 10%;
+
+                .card {
+                    color: gold;
+                    border: 1px solid gold;
+                    width: 400px;
+                    margin: 5% 2%;
+                    padding: 2%;
+
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                }
             }
         }
 
@@ -184,6 +208,16 @@ body {
     }
 
     #contact {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url(../images/home_image.jpeg);
+        background-color: #cccccc;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
 
         header {
             background-color: $tertiary-color;
@@ -221,16 +255,40 @@ body {
         }
 
         main {
-            flex: 1;
+            height: 100%;
             display: flex;
-            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 10%;
 
             .container {
-                width: 100%;
+                width: 85%;
                 text-align: center;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                background-color: $primary-color;
+                border: 1px solid $tertiary-color;
+
+                .contact-info {
+                    color: $accents-color;
+                    padding: 20px 10px;
+                    font-size: 1.3rem;
+
+                    h4 {
+                        padding: 10px;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .map {
+                background-color: $primary-color;
+                width: 80%; // width will eventually be defined mainly by my image
+                height: 400px; // height will eventually be defined solely by my image
+                color: white;
+                text-align: center;
             }
         }
 

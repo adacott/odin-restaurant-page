@@ -2,6 +2,7 @@ import "./../scss/style.scss";
 import "./home.js";
 import "./menu.js";
 import "./contact.js";
+import img from "./../images/pep_pizza_icon.jpeg";
 
 
 if (process.env.NODE_ENV !== 'production') {
