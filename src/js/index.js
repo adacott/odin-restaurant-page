@@ -1,8 +1,7 @@
 import "./../scss/style.scss";
-import "./home.js";
-import "./menu.js";
 import "./contact.js";
 import { createHome } from "./home.js";
+import { createMenu } from "./menu.js";
 
 
 if (process.env.NODE_ENV !== 'production') {
@@ -12,16 +11,17 @@ if (process.env.NODE_ENV !== 'production') {
 console.log("Connected and watching");
 
 // =======================================================================
-
 window.onload = function () {
     createHome();
+
+    const homeBtn = document.querySelector("header nav ul li:nth-child(1)");
+    homeBtn.addEventListener("click", createHome);
+
+    // Create an eventlistener for the menu button to execute the function
+    const menuBtn = document.querySelector("header nav ul li:nth-child(2)");
+    menuBtn.addEventListener("click", createMenu);
 }
 
-// Create an eventlistener for the home button to execute the function if not on initial page load
-const homeBtn = document.querySelector("#home header nav ul li:nth-child(1)");
-homeBtn.addEventListener("click", function () {
-    createHome();
-});
 
 // createMenu();
 // createContact();

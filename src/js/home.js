@@ -75,10 +75,16 @@ function createFooter(footer) {
 
 
 function createHome() {
-    const { header, main, footer } = createMainStructure();
-    createHeader(header, img);
-    createMain(main);
-    createFooter(footer);
+    if (document.getElementById("home")) {
+        return;
+    } else {
+        const content = document.getElementById("content");
+        content.removeChild(content.lastChild);
+        const { header, main, footer } = createMainStructure();
+        createHeader(header, img);
+        createMain(main);
+        createFooter(footer);
+    }
 }
 
 export { createHome };
