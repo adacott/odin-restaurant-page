@@ -8,7 +8,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, '../dist'),
-        // clean: true,
+        clean: true,
     },
     module: {
         rules: [
@@ -36,9 +36,16 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Webpack Template",
-            inject: 'body',
             template: "./src/html/index.html",
+            inject: false,
+            // This option allows you to specifically control where to place the css and js tags in your code.
+            // To place css use: <%= css %> and to place js use: <%= js %> where you want the tags to be placed.
+            // Likewise, you can remove templateParameters, set inject:body, and
+            templateParameters: (compilation, assets) => {
+                const js = assets.js.map((filePath) => `<script src="${filePath}"></script>`).join("\n");
+                const css = assets.css.map((filePath) => `<link rel="stylesheet" href="${filePath}" />`).join("\n");
+                return { css, js };
+            },
             // fileName: "[name].html" -- don't need this when using template
         }),
         new MiniCssExtractPlugin({
