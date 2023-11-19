@@ -3,7 +3,7 @@
 // Universally applied styles:
 
 $primary-color: rgba(26, 26, 26, 0.648);
-$secondary-color: red;
+$secondary-color: gold;
 $tertiary-color: rgba(202, 172, 1, 0.503);
 $accents-color: white;
 
@@ -200,7 +200,7 @@ a {
                 justify-content: center;
                 align-items: start;
                 flex-wrap: wrap;
-                border: 1px solid gold;
+                border: 1px solid $secondary-color;
                 background-color: $primary-color;
                 margin-bottom: 10%;
 
@@ -223,7 +223,7 @@ a {
 
         footer {
             background-color: $tertiary-color;
-            border-top: 1px solid gold;
+            border-top: 1px solid $secondary-color;
             text-align: center;
             padding: 15px 0px;
         }

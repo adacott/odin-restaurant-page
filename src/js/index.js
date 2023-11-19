@@ -18,6 +18,8 @@ window.onload = function () {
     homeBtn.addEventListener("click", createHome);
     const menuBtn = document.querySelector("header nav ul li:nth-child(2)");
     menuBtn.addEventListener("click", createMenu);
+    const contactBtn = document.querySelector("header nav ul li:nth-child(3)");
+    contactBtn.addEventListener("click", createContact);
 }
 
 
