@@ -69,7 +69,7 @@ function createMain(main) {
 function createFooter(footer) {
     const div = document.createElement("div");
     div.classList.add("copy-notice");
-    div.textContent = "Coptright (C) adacott 2023";
+    div.textContent = "Copyright (C) adacott 2023";
     footer.appendChild(div);
 }
 
@@ -87,18 +87,14 @@ function createInitialPage() {
 }
 
 function createHome() {
-    if (document.getElementById("home")) {
-        return;
-    }
-    else {
-        const content = document.getElementById("content");
-        const section = content.lastChild;
-        section.id = "home";
-        const main = document.querySelector("main");
-        main.innerHTML = ""; // clear the content of main
+    const main = document.querySelector("main");
+    main.innerHTML = ""; // clear the content of main
 
-        createMain(main);
-    }
+    const content = document.getElementById("content");
+    const section = content.lastChild;
+    section.id = "home";
+
+    createMain(main);
 }
 
 export { createHome, createInitialPage };

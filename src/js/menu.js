@@ -31,8 +31,6 @@ function createMain(main) {
         container.appendChild(card);
     }
     main.appendChild(container);
-
-
 }
 
 
@@ -48,8 +46,6 @@ function createMenu() {
         const main = section.querySelector("main");
         createMain(main);
     }
-
-
 }
 
 export { createMenu };

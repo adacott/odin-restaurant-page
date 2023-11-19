@@ -1,7 +1,7 @@
 import "./../scss/style.scss";
-import "./contact.js";
 import { createHome, createInitialPage } from "./home.js";
 import { createMenu } from "./menu.js";
+import { createContact } from "./contact.js";
 
 
 if (process.env.NODE_ENV !== 'production') {
@@ -21,7 +21,3 @@ window.onload = function () {
     const contactBtn = document.querySelector("header nav ul li:nth-child(3)");
     contactBtn.addEventListener("click", createContact);
 }
-
-
-// createMenu();
-// createContact();
