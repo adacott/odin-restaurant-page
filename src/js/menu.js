@@ -1,3 +1,5 @@
+import logo from "./../images/pep_pizza.png";
+
 function createMain(main) {
     main.innerHTML = "";
     const container = document.createElement("div");
@@ -9,7 +11,9 @@ function createMain(main) {
         card.classList.add("card");
 
         const img = document.createElement("img");
-        img.src = "";
+        img.src = logo;
+        img.style.height = "200px";
+        img.style.width = "200px";
         img.alt = "Menu item";
 
         const div = document.createElement("div");
