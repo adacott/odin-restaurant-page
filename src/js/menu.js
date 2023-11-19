@@ -1,7 +1,6 @@
 import logo from "./../images/pep_pizza.png";
 
 function createMain(main) {
-    main.innerHTML = "";
     const container = document.createElement("div");
     container.classList.add("container");
 
@@ -48,6 +47,7 @@ function createMenu() {
         section.id = "menu";
 
         const main = section.querySelector("main");
+        main.innerHTML = "";
         createMain(main);
     }
 }
