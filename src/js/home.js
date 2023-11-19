@@ -87,14 +87,18 @@ function createInitialPage() {
 }
 
 function createHome() {
-    const content = document.getElementById("content");
-    const section = content.lastChild;
     if (document.getElementById("home")) {
         return;
     }
-    section.id = "home";
-    const main = document.querySelector("main");
-    createMain(main);
+    else {
+        const content = document.getElementById("content");
+        const section = content.lastChild;
+        section.id = "home";
+        const main = document.querySelector("main");
+        main.innerHTML = ""; // clear the content of main
+
+        createMain(main);
+    }
 }
 
 export { createHome, createInitialPage };
